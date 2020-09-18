@@ -1,9 +1,9 @@
 require "player"
 
 describe Player do
-  let(:game) {Game.new}
   subject(:charlie) { Player.new("Charlie") }
   subject(:gary) { Player.new("Gary") }
+  let(:game) { Game.new(charlie, gary) }
 
   describe "#name" do
     it "returns the player name" do
@@ -17,12 +17,10 @@ describe Player do
       expect(charlie.hp).to eq 60
     end
   end
-  
+
   describe "#take_damage" do
     it "reduces hitpoints when attacked" do
       expect { game.attack(gary) }.to change { gary.hp }.by(-10)
     end
   end
-
- 
 end
