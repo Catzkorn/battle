@@ -1,13 +1,12 @@
-<%= $game.whose_turn%>'s Turn
+<title>Battle!</title>
+<h1><%= $game.attacker.name%>'s Turn</h1>
+<h3><%= $game.player_one.name %> vs. <%= $game.player_two.name %></h3>
 
-<%= $game.player_one.name %> vs. <%= $game.player_two.name %>
+<p><%= $game.player_two.name %>: <%= $game.player_two.hp %>HP</p>
+<p><%= $game.player_one.name %>: <%= $game.player_one.hp %>HP</p>
 
-<%= $game.player_two.name %>: <%= $game.player_two.hp %>HP
-
-
+<br>
+<br>
 <form action="/attack"> 
 <input type="submit" value="Attack"> 
 </form>
-
-
-

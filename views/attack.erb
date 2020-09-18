@@ -1,6 +1,9 @@
-<%= $game.player_one.name %> attacked <%= $game.player_two.name %>
+<h1><%= $game.attacker.name %> attacked <%= $game.defender.name %></h1>
+<% $game.attack($game.defender) %>
+<p><%= $game.defender.name %>: <%= $game.defender.hp %>HP</p>
 
-<%= $game.player_two.name %>: <%= $game.player_two.hp %>HP
+<br>
 
-<%= $game.switch_turn%>
+<% $game.switch_attacker %>
+<% $game.switch_defender %>
 <a href="/play">Return to Play</a>
